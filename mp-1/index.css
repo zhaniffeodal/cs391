@@ -1,131 +1,265 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", system-ui, sans-serif;
 }
 
-#page-wrapper{
-    width: 80vw;
-    margin: 0 auto;
+#page-wrapper {
+  width: 80vw;
+  margin: 0 auto;
 }
 
-header{
-    padding: 1%;
-    background-color: brown;
-    color: bisque;
+header {
+  padding: 2%;
+  background-color: #1f2933;
+  color: #d9e2ec;
+  text-align: left;
 }
 
-#nav-main{
-    display: flex;
-    flex-direction: row;
+header h1 {
+  font-size: calc(6px + 2.5vw);
+}
+
+header p {
+  font-size: calc(4px + 1.2vw);
+}
+
+#nav-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+nav {
+  background-color: #334e68;
+  width: 30%;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li {
+  width: 80%;
+  background-color: #d9e2ec;
+  padding: 2%;
+  margin: 15% auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: calc(2px + 1.3vw);
+  color: black;
+  display: block;
+}
+
+main {
+  padding: 2%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  text-align: center;
+  width: 70%;
+}
+
+main h2 {
+  margin: 2% 0;
+  font-size: calc(6px + 2vw);
+  color: #0f766e;
+}
+
+main p {
+  line-height: 130%;
+  font-size: calc(3px + 2vw);
+  padding: 2%;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+#picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 5% 0;
+  gap: 2%;
+}
+
+#picture img {
+  max-width: 40%;
+  border-radius: 14px;
+}
+
+#picture p {
+  width: 50%;
+}
+
+footer {
+  background-color: #1f2933;
+  color: white;
+  padding: 1%;
+  text-align: center;
+}
+
+footer a {
+  color: rgb(14, 186, 244);
+}
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.project-list > li {
+  list-style: none;
+  background-color: #eef2f7;
+  padding: 2%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.project-list h3 {
+  font-size: calc(6px + 1.2vw);
+  color: #1f2933;
+  margin-bottom: 1%;
+}
+
+.course-list {
+  padding-left: 4%;
+}
+
+.course-list li {
+  font-size: calc(4px + 0.9vw);
+  line-height: 140%;
+  margin-bottom: 1%;
+}
+
+.calc-card {
+  background-color: #eef2f7;
+  border-radius: 12px;
+  padding: 2%;
+  margin: 2% auto 0 auto;
+  max-width: 70vw;
+}
+
+.calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.calc-box {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 2%;
+  flex: 1 1 25%;
+  text-align: left;
+}
+
+.calc-label {
+  font-size: calc(4px + 0.9vw);
+  margin-bottom: 1%;
+  color: #1f2933;
+}
+
+.calc-input {
+  width: 100%;
+  padding: 2%;
+  border-radius: 10px;
+  border: 2px solid #d9e2ec;
+  font-size: calc(4px + 0.9vw);
+  font-family: inherit;
+}
+
+.calc-output {
+  font-size: calc(6px + 1.2vw);
+  color: #0f766e;
+  min-height: 1.5em;
+}
+
+.calc-output.neg {
+  color: #b91c1c;
+}
+
+.calc-btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+.calc-btn {
+  background-color: #334e68;
+  color: #d9e2ec;
+  border: none;
+  border-radius: 10px;
+  padding: 2% 3%;
+  font-size: calc(4px + 1vw);
+  cursor: pointer;
+  min-width: 12%;
+}
+
+.calc-btn-clear {
+  background-color: #1f2933;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    text-align: center;
+  }
+
+  #nav-main {
+    flex-direction: column;
+  }
+
+  nav,
+  main {
     width: 100%;
-}
+  }
 
-nav{
-    background-color: chocolate;
-    width: 30%;
-}
-
-nav ul{
-    list-style: none;
-    padding-left: 0;
-}
-
-nav li{
-    width: 80%;
-    background-color:orange;
-    padding: 1%;
-    margin: 18% auto;
-    text-align: center;
-}
-
-nav a{
-    text-decoration: none;
-    font-size: calc(2px + 1.3vw);
-}
-
-main{
-    padding: 1% 2%;
-    height: 150vh;
-    background-color: wheat;
-    text-align: center;
-    width: 70%;
-}
-
-#this-one{
+  nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    width: 28%;
+    margin: 2%;
+  }
+
+  #picture {
+    flex-direction: column;
+  }
+
+  #picture p {
     width: 100%;
-    margin: 5% 0;
-}
+  }
 
-main p{
-    line-height: 100%;
-    font-size: calc(2px + 2vw);
-    padding: 2%;
-}
+  #picture img {
+    max-width: 60%;
+  }
 
-main h3{
-    text-align: center;
-    margin: 2% 0;
-    font-size: calc(2px + 2vw);
-    color: maroon;
-}
+  .calc-card {
+    max-width: 95vw;
+  }
 
-main img{
-    max-width: 40%;
-}
+  .calc-box {
+    flex: 1 1 100%;
+  }
 
-footer{
-    background-color: brown;
-    color: bisque;
-    padding: 1%;
-    text-align: center;
-}
-
-#time-date{
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: baseline;
-}
-
-footer a{
-    color: bisque;
-}
-
-@media  screen and (max-width: 1000px) {
-    #nav-main{
-        flex-direction: column;
-    }
-
-    nav, main{
-        width: 100%;
-    }
-
-    nav ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-    nav li{
-        width: 18%;
-        padding: 1%;
-        margin: 1%;
-    }
-
-    #this-one{
-        flex-direction: column;
-    }
-
-    header{
-        text-align: center;
-    }
-
-    main{
-        height: 100vh;
-    }
+  .calc-btn {
+    min-width: 28%;
+  }
 }

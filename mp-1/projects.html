@@ -3,34 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <title>Projects | Resume</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <div id="page-wrapper">
-    <header>
-      <h1>Amir's Resume</h1>
-      <p>An online website showcasing Amir's career objectives and goals</p>
-    </header>
-    <div id="nav-main">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contacts.html">Contacts</a></li>
-      </ul>
-    </nav>
-    <main id="main">
-      <ul>
-        <li> Project 1: JS Calc </li>
-      </ul>
-    </main>
-    </div> 
-    <footer>
-      <p>All rights reserved by Amir Batyrkhanov <a href=""> Credits</a> &#169;</p>
-    </footer>
+      <header>
+        <h1>Amir's Resume</h1>
+        <p>An online website showcasing Amir's career objectives and goals</p>
+      </header>
+      <div id="nav-main">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+          </ul>
+        </nav>
+        <main id="main">
+          <h2>Calculator</h2>
+
+          <div class="calc-card">
+            <div class="calc-row">
+              <div class="calc-box">
+                <label for="first-number" class="calc-label"
+                  >First Number</label
+                >
+                <input type="text" id="first-number" class="calc-input" />
+              </div>
+
+              <div class="calc-box">
+                <label for="second-number" class="calc-label"
+                  >Second Number</label
+                >
+                <input type="text" id="second-number" class="calc-input" />
+              </div>
+
+              <div class="calc-box">
+                <p class="calc-label">Output</p>
+                <h3 id="output" class="calc-output"></h3>
+              </div>
+            </div>
+
+            <div class="calc-btn-row">
+              <button class="calc-btn" onclick="addition()">+</button>
+              <button class="calc-btn" onclick="subtraction()">-</button>
+              <button class="calc-btn" onclick="multiplication()">*</button>
+              <button class="calc-btn" onclick="division()">/</button>
+              <button class="calc-btn" onclick="power()">**</button>
+              <button class="calc-btn calc-btn-clear" onclick="clearAll()">
+                Clear
+              </button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>
+          All rights reserved by Amir Batyrkhanov <a href=""> Credits</a> &#169;
+        </p>
+      </footer>
     </div>
+    <script src="calc.js"></script>
   </body>
 </html>
